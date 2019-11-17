@@ -90,9 +90,17 @@ export default class Game {
       ctx.fillStyle = "white";
       ctx.textAlign = "center";
       ctx.fillText(
-        "Press SPACEBAR to Enter Clown Zone",
+        "Press SPACEBAR to Start the Game",
         this.gameWidth / 2,
         this.gameHeight / 2
+      );
+      ctx.font = "18px Arial";
+      ctx.fillStyle = "white";
+      ctx.textAlign = "center";
+      ctx.fillText(
+        "use the left and right arrow keys",
+        this.gameWidth / 2,
+        this.gameHeight / 1.5
       );
     }
     if (this.gamestate === GAMESTATE.GAMEOVER) {
@@ -103,11 +111,7 @@ export default class Game {
       ctx.font = "25px Arial";
       ctx.fillStyle = "white";
       ctx.textAlign = "center";
-      ctx.fillText(
-        "RAY STEVENS HAS WON",
-        this.gameWidth / 2,
-        this.gameHeight / 2
-      );
+      ctx.fillText("You Lose", this.gameWidth / 2, this.gameHeight / 2);
     }
   }
 
